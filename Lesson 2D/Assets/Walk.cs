@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Walk : MonoBehaviour
 {
+    
     public TMP_Text CashBalance;
     public int Cash = 0;
     public void OnTriggerEnter2D(Collider2D collider)
@@ -32,10 +33,16 @@ public class Walk : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             gameObject.transform.position = gameObject.transform.position + new Vector3(0.05f,0,0);
+            transform.localScale = new Vector3(2, 1, 1);
         }
-        if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A))
         {
             gameObject.transform.position = gameObject.transform.position - new Vector3(0.05f, 0, 0);
+            transform.localScale = new Vector3(-2, 1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
         }
     }
 }
