@@ -1,11 +1,29 @@
+using TMPro;
 using UnityEngine;
+
 
 public class Walk : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public TMP_Text CashBalance;
+    public int Cash = 0;
+    public void OnTriggerEnter2D(Collider2D collider)
     {
-        
+        if (collider.CompareTag("Coin"))
+        {
+            
+            Cash++;
+            
+            
+        }
+    }
+    public void OnCollisionEnter2D(Collision2D Collision)
+    {
+        if (Collision.gameObject.CompareTag("Coin"))
+        {
+            
+            Cash++;
+            CashBalance.text = $"{Cash}";
+        }
     }
 
     // Update is called once per frame

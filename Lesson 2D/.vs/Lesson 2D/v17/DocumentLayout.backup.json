@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\IceTea\\Desktop\\\u0423\u0440\u043E\u043A\u0438 \u043F\u043E Unity\\Lesson 2D\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{96DF70D0-955E-E013-112E-DA1BC0FD9681}|Assembly-CSharp.csproj|c:\\users\\icetea\\desktop\\\u0443\u0440\u043E\u043A\u0438 \u043F\u043E unity\\lesson 2d\\assets\\coins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96DF70D0-955E-E013-112E-DA1BC0FD9681}|Assembly-CSharp.csproj|solutionrelative:assets\\coins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{96DF70D0-955E-E013-112E-DA1BC0FD9681}|Assembly-CSharp.csproj|c:\\users\\icetea\\desktop\\\u0443\u0440\u043E\u043A\u0438 \u043F\u043E unity\\lesson 2d\\assets\\walk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{96DF70D0-955E-E013-112E-DA1BC0FD9681}|Assembly-CSharp.csproj|solutionrelative:assets\\walk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Coins.cs",
+              "DocumentMoniker": "C:\\Users\\IceTea\\Desktop\\\u0423\u0440\u043E\u043A\u0438 \u043F\u043E Unity\\Lesson 2D\\Assets\\Coins.cs",
+              "RelativeDocumentMoniker": "Assets\\Coins.cs",
+              "ToolTip": "C:\\Users\\IceTea\\Desktop\\\u0423\u0440\u043E\u043A\u0438 \u043F\u043E Unity\\Lesson 2D\\Assets\\Coins.cs",
+              "RelativeToolTip": "Assets\\Coins.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T17:40:51.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Walk.cs",
               "DocumentMoniker": "C:\\Users\\IceTea\\Desktop\\\u0423\u0440\u043E\u043A\u0438 \u043F\u043E Unity\\Lesson 2D\\Assets\\Walk.cs",
               "RelativeDocumentMoniker": "Assets\\Walk.cs",
