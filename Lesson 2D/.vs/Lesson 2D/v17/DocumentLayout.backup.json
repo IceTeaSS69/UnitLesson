@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\IceTea\\Desktop\\\u0423\u0440\u043E\u043A\u0438 \u043F\u043E Unity\\Lesson 2D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{96DF70D0-955E-E013-112E-DA1BC0FD9681}|Assembly-CSharp.csproj|C:\\Users\\IceTea\\Desktop\\\u0423\u0440\u043E\u043A\u0438 \u043F\u043E Unity\\Lesson 2D\\assets\\walk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96DF70D0-955E-E013-112E-DA1BC0FD9681}|Assembly-CSharp.csproj|solutionrelative:assets\\walk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{96DF70D0-955E-E013-112E-DA1BC0FD9681}|Assembly-CSharp.csproj|c:\\users\\icetea\\desktop\\\u0443\u0440\u043E\u043A\u0438 \u043F\u043E unity\\lesson 2d\\assets\\scripts\\walk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96DF70D0-955E-E013-112E-DA1BC0FD9681}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\walk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96DF70D0-955E-E013-112E-DA1BC0FD9681}|Assembly-CSharp.csproj|c:\\users\\icetea\\desktop\\\u0443\u0440\u043E\u043A\u0438 \u043F\u043E unity\\lesson 2d\\assets\\coins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96DF70D0-955E-E013-112E-DA1BC0FD9681}|Assembly-CSharp.csproj|solutionrelative:assets\\coins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IceTea\\Desktop\\\u0423\u0440\u043E\u043A\u0438 \u043F\u043E Unity\\Lesson 2D\\Assets\\Walk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Walk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\IceTea\\Desktop\\\u0423\u0440\u043E\u043A\u0438 \u043F\u043E Unity\\Lesson 2D\\Assets\\Coins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Coins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Walk.cs",
+              "DocumentMoniker": "C:\\Users\\IceTea\\Desktop\\\u0423\u0440\u043E\u043A\u0438 \u043F\u043E Unity\\Lesson 2D\\Assets\\Scripts\\Walk.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Walk.cs",
+              "ToolTip": "C:\\Users\\IceTea\\Desktop\\\u0423\u0440\u043E\u043A\u0438 \u043F\u043E Unity\\Lesson 2D\\Assets\\Scripts\\Walk.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Walk.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T18:33:09.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Coins.cs",
               "DocumentMoniker": "C:\\Users\\IceTea\\Desktop\\\u0423\u0440\u043E\u043A\u0438 \u043F\u043E Unity\\Lesson 2D\\Assets\\Coins.cs",
               "RelativeDocumentMoniker": "Assets\\Coins.cs",
@@ -30,21 +47,18 @@
               "RelativeToolTip": "Assets\\Coins.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T17:40:51.31Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-07T17:40:51.31Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Walk.cs",
               "DocumentMoniker": "C:\\Users\\IceTea\\Desktop\\\u0423\u0440\u043E\u043A\u0438 \u043F\u043E Unity\\Lesson 2D\\Assets\\Walk.cs",
               "RelativeDocumentMoniker": "Assets\\Walk.cs",
               "ToolTip": "C:\\Users\\IceTea\\Desktop\\\u0423\u0440\u043E\u043A\u0438 \u043F\u043E Unity\\Lesson 2D\\Assets\\Walk.cs",
               "RelativeToolTip": "Assets\\Walk.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA5wCgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T17:35:08.411Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-07T17:35:08.411Z"
             }
           ]
         }
