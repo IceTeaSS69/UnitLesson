@@ -1,58 +1,119 @@
 using TMPro;
 using UnityEngine;
 
-
 public class Walk : MonoBehaviour
 {
+    [Header("UI")]
+    [SerializeField] private TMP_Text cashBalanceText;
     
-    public TMP_Text CashBalance; //Текст на вывод
-    public int Cash = 0;//Количество монет
-    public void OnTriggerEnter2D(Collider2D collider) //Коллайдер с монетой 1
+    [Header("Movement")]
+    [SerializeField] private float moveSpeed = 0.05f;
+    [SerializeField] private Vector3 rightScale = new Vector3(2f, 1f, 1f);
+    [SerializeField] private Vector3 leftScale = new Vector3(-2f, 1f, 1f);
+    [SerializeField] private Vector3 idleScale = new Vector3(1f, 1f, 1f);
+    
+    [Header("Game Data")]
+    [SerializeField] private int cash = 0;
+    
+    // РљСЌС€РёСЂРѕРІР°РЅРЅС‹Рµ РєРѕРјРїРѕРЅРµРЅС‚С‹
+    private Transform cachedTransform;
+    
+    // РљРѕРЅСЃС‚Р°РЅС‚С‹ РґР»СЏ РјРѕРЅРµС‚
+    private const string COIN_TAG = "Coin";
+    private const string COIN2_TAG = "Coin2";
+    private const int COIN_VALUE = 1;
+    private const int COIN2_VALUE = 3;
+    
+    private void Awake()
     {
-        if (collider.CompareTag("Coin"))
+        // РљСЌС€РёСЂСѓРµРј transform РґР»СЏ РѕРїС‚РёРјРёР·Р°С†РёРё
+        cachedTransform = transform;
+        UpdateCashDisplay();
+    }
+    
+    private void Update()
+    {
+        HandleMovement();
+    }
+    
+    private void HandleMovement()
+    {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        
+        if (horizontal != 0)
         {
-            Cash++;//Прибавление монет
+            // Р”РІРёР¶РµРЅРёРµ
+            Vector3 movement = new Vector3(horizontal * moveSpeed, 0f, 0f);
+            cachedTransform.position += movement;
+            
+            // РџРѕРІРѕСЂРѕС‚ СЃРїСЂР°Р№С‚Р°
+            cachedTransform.localScale = horizontal > 0 ? rightScale : leftScale;
         }
-        if (collider.CompareTag("Coin2"))
+        else
         {
-            Cash++;
-            Cash++;
-            Cash++;
+            // РЎРѕСЃС‚РѕСЏРЅРёРµ РїРѕРєРѕСЏ
+            cachedTransform.localScale = idleScale;
         }
     }
-    public void OnCollisionEnter2D(Collision2D Collision) //Коллизия с монетой 2
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (Collision.gameObject.CompareTag("Coin"))
-        {  
-            Cash++;//Прибавление монет
-            CashBalance.text = $"{Cash}";//Вывод количества монет в текст на экране
-        }
-        if (Collision.gameObject.CompareTag("Coin2"))
+        ProcessCoinCollection(other.gameObject);
+    }
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        ProcessCoinCollection(collision.gameObject);
+    }
+    
+    private void ProcessCoinCollection(GameObject coinObject)
+    {
+        if (coinObject.CompareTag(COIN_TAG))
         {
-            Cash++;
-            Cash++;
-            Cash++;
-            CashBalance.text = $"{Cash}";
+            CollectCoin(COIN_VALUE);
+            Destroy(coinObject);
+        }
+        else if (coinObject.CompareTag(COIN2_TAG))
+        {
+            CollectCoin(COIN2_VALUE);
+            Destroy(coinObject);
         }
     }
-
-
     
-    void Update() //Ходьба с трансформом
+    private void CollectCoin(int value)
     {
-        if (Input.GetKey(KeyCode.D))//Ходьба вправо
+        cash += value;
+        UpdateCashDisplay();
+    }
+    
+    private void UpdateCashDisplay()
+    {
+        if (cashBalanceText != null)
         {
-            gameObject.transform.position = gameObject.transform.position + new Vector3(0.05f,0,0);
-            transform.localScale = new Vector3(2, 1, 1);
+            cashBalanceText.text = cash.ToString();
         }
-        else if (Input.GetKey(KeyCode.A))//Ходьба влево
+    }
+    
+    // РџСѓР±Р»РёС‡РЅС‹Рµ РјРµС‚РѕРґС‹ РґР»СЏ РґРѕСЃС‚СѓРїР° Рє РґР°РЅРЅС‹Рј
+    public int GetCash() => cash;
+    
+    public void AddCash(int amount)
+    {
+        if (amount > 0)
         {
-            gameObject.transform.position = gameObject.transform.position - new Vector3(0.05f, 0, 0);
-            transform.localScale = new Vector3(-2, 1, 1);
+            cash += amount;
+            UpdateCashDisplay();
         }
-        else//Ресет растяжения
+    }
+    
+    public bool SpendCash(int amount)
+    {
+        if (amount > 0 && cash >= amount)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            cash -= amount;
+            UpdateCashDisplay();
+            return true;
         }
+        return false;
     }
 }
